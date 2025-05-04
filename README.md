@@ -48,6 +48,46 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-# igrf-api
-# igrf-api
-# igrf-api
+## Building an APK with EAS
+
+This project is configured to use [EAS Build](https://docs.expo.dev/build/introduction/) for creating Android APK files.
+
+### Prerequisites
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Log in to your Expo account:
+   ```bash
+   npx eas login
+   ```
+   If you don't have an Expo account, you can create one at [expo.dev](https://expo.dev/signup).
+
+### Building an APK
+
+To build an APK for testing:
+
+```bash
+npm run build:androidapk
+```
+
+This will:
+1. Start the EAS build process
+2. Build an APK file in the cloud
+3. Provide a download link when the build is complete
+
+### Other Build Options
+
+- For internal testing (faster builds):
+  ```bash
+  npm run build:android
+  ```
+
+- For production release:
+  ```bash
+  npm run build:production
+  ```
+
+For more information about EAS Build, visit the [Expo documentation](https://docs.expo.dev/build/setup/).
